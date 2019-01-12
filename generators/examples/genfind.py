@@ -9,7 +9,8 @@ def gen_find(filepat, top):
 
 # Example use
 
+filepath = r"C:\Apps\davidyshuang\python3\generators\examples\www"
 if __name__ == '__main__':
-    lognames = gen_find("access-log*","www")
+    lognames = gen_find("access-log*",filepath)
     for name in lognames:
         print(name)

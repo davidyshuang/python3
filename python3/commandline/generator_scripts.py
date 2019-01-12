@@ -1,6 +1,5 @@
 #run below in Python command line
-it = names.__iter__()
-it.__next__()
+
 
 # Need change below FULL path
 filename = r"C:\Apps\davidyshuang\python3\python3\data\NASDAQ_20101105.csv"
@@ -20,7 +19,8 @@ for x in countdown(5):
     print (x)
 
 # demo of using generator in a pipeline
-filename = r"C:\Apps\davidyshuang\python3\python3\data\NASDAQ_20101105.csv"
+#
+
 def grep ( pattern, infilename):
     with open(infilename,'r') as f:
         for line in f:

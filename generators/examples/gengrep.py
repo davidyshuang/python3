@@ -14,7 +14,8 @@ if __name__ == '__main__':
     from genopen import  gen_open
     from gencat  import  gen_cat
 
-    lognames = Path('www').rglob('access-log*')
+    filepath = r"C:\Apps\davidyshuang\python3\generators\examples\www"
+    lognames = Path(filepath).rglob('access-log*')
     logfiles = gen_open(lognames)
     loglines = gen_cat(logfiles)
 

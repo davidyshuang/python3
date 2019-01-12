@@ -16,9 +16,10 @@ def gen_open(paths):
 
 # Example use
 
+filepath = r"C:\Apps\davidyshuang\python3\generators\examples\www"
 if __name__ == '__main__':
     from pathlib import Path
-    lognames = Path('www').rglob('access-log*')
+    lognames = Path(filepath).rglob('access-log*')
     logfiles = gen_open(lognames)
     for f in logfiles:
         print(f)
