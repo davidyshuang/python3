@@ -5,7 +5,8 @@
 from linesdir import lines_from_dir
 from apachelog import apache_log
 
-lines = lines_from_dir("access-log*","www")
+filepath = r"C:\Apps\davidyshuang\python3\generators\examples\www"
+lines = lines_from_dir("access-log*",filepath)
 log = apache_log(lines)
 
 stat404 =  {  r['request'] for r in log

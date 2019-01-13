@@ -2,7 +2,8 @@
 #
 # Read a sequence of log lines and parse them into a sequence of tuples
 
-loglines = open("access-log")
+filename = r"C:\Apps\davidyshuang\python3\generators\examples\access-log"
+loglines = open(filename)
 
 import re
 

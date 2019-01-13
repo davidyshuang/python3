@@ -29,7 +29,8 @@ def apache_log(lines):
 
 if __name__ == '__main__':
     from linesdir import lines_from_dir
-    lines = lines_from_dir("access-log*","www")
+    filepath = r"C:\Apps\davidyshuang\python3\generators\examples\www"
+    lines = lines_from_dir("access-log*",filepath)
     log = apache_log(lines)
     for r in log:
         print(r)
