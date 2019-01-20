@@ -11,8 +11,7 @@ def field_map(dictseq, name, func):
 
 if __name__ == '__main__':
 
-    filename = r"C:\Apps\davidyshuang\python3\generators\examples\access-log"
-    loglines = open(filename)
+    loglines = open("access-log")
 
     import re
 

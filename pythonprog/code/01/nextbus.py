@@ -18,7 +18,7 @@ data = u.read()
 from xml.etree.ElementTree import XML
 doc = XML(data)
 
-import pdb; pdb.set_trace()    # Launch debugger
+#import pdb; pdb.set_trace()    # Launch debugger
 
 for pt in doc.findall('.//pt'):
     print(pt.text)
