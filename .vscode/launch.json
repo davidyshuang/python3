@@ -11,7 +11,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "stopOnEntry":true,
-            "cwd": "${workspaceFolder}/deep-learning-from-scratch/ch01"
+           // "cwd": "${workspaceFolder}/deep-learning-from-scratch/ch01"
         },
         {
             "name": "Python: Attach",
