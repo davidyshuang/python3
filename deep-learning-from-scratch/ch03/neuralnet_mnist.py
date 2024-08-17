@@ -1,11 +1,15 @@
 # coding: utf-8
-import sys, os
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
-import numpy as np
-import pickle
-from dataset.mnist import load_mnist
-from common.functions import sigmoid, softmax
+import os
+import sys
 
+import pickle
+
+import numpy as np
+
+#sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from common.functions import sigmoid, softmax
+from dataset.mnist import load_mnist
 
 def get_data():
     (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, flatten=True, one_hot_label=False)
@@ -13,7 +17,8 @@ def get_data():
 
 
 def init_network():
-    with open("sample_weight.pkl", 'rb') as f:
+    #with open(os.getcwd()+"/ch03/sample_weight.pkl", 'rb') as f:  # added so that can open the parent folder in vs code
+    with open(os.path.dirname(os.path.abspath(__file__))+"/sample_weight.pkl", 'rb') as f:  # added so that can open the parent folder in vs code    
         network = pickle.load(f)
     return network
 
@@ -30,7 +35,6 @@ def predict(network, x):
     y = softmax(a3)
 
     return y
-
 
 x, t = get_data()
 network = init_network()

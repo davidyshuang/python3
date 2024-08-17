@@ -1,4 +1,5 @@
 # coding: utf-8
+""" module description """
 import numpy as np
 
 
@@ -33,6 +34,7 @@ def shuffle_dataset(x, t):
     return x, t
 
 def conv_output_size(input_size, filter_size, stride=1, pad=0):
+    """ function description """
     return (input_size + 2*pad - filter_size) / stride + 1
 
 
